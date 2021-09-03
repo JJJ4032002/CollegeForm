@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+input {
+  width: 100%;
+}
+
+#Container {
+  margin: 1em auto;
+  width: 90%;
+
+  padding: 1em 1em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.date {
+  margin: 0.5em 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.instructions {
+  margin: 1em 0;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 0.5em 0;
+}
+.cgpa {
+  margin: 1em 0 1em 2em;
+}
+.cgpa input {
+  border: 1px solid transparent;
+  border-bottom: 1px solid black;
+}
+
+.MainFlex {
+  display: flex;
+  gap: 2em;
+}
+.MainFlex input,
+.MarksContainer input {
+  padding: 0.3em 0.3em;
+}
+
+.MarksContainer {
+  margin: 2em 0;
+}
+
+.flexMarks {
+  margin: 0.5em 0;
+
+  gap: 1em;
+
+  justify-content: center;
+  align-items: center;
+}
+button {
+  padding: 0.2em 1em;
+  font-size: 1rem;
+  background-color: cadetblue;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+.displayContainer {
+  margin: 1em auto;
+  padding: 0 1em;
+  border: 0.5em solid black;
+}
+
+.dispStudDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 2em 0;
+
+  justify-content: center;
+}
+.dispStudDetails input {
+  border: 1px solid transparent;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+.dispStudDetails input:focus {
+  outline: none;
+}
+
+.displayContainer h1,
+h2 {
+  text-align: center;
+}
+
+.gridContainer {
+  display: grid;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  border: 1px solid black;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+.gridContainer p {
+  margin-top: 0.3em;
+}
+.gradeColumn,
+.creditsColumn,
+.courseColumn {
+  justify-self: center;
+  text-align: center;
+}
+
+.gradeColumn input,
+.creditsColumn input {
+  display: block;
+  margin-top: 0.3em;
+  border: 1px solid transparent;
+  border-bottom: 1px solid black;
+  text-align: center;
+  width: 100%;
+}
+.gradeColumn input:focus,
+.creditsColumn input:focus {
+  outline: none;
+}
+.cgpa input {
+  width: 20%;
+}
+.cgpa input:focus {
+  outline: none;
+}
+
+@media (min-width: 700px) {
+  #Container {
+    width: 60%;
+  }
+  .dispStudDetails {
+    justify-content: space-between;
+  }
+  .flexMarks {
+    justify-content: initial;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

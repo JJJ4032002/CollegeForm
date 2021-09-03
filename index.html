@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id = "Container">
+        <div class="date">
+            <p>Lab Assignment</p>
+            <p>Date - 02 sep 2021</p>
+        </div>
+        <div class="instructions">
+            Write JavaScript code to generate the marksheet. The student’s details and marks obtained should be filled in the input
+            boxes and after submitting the form, the marksheet should be generated as per the information provided.The grades should
+            be given as per thefollowingcriteria: A+ => 81 to 100, A=> 72 to 80, B+=> 64 to 71, B=> 56 to 63, C+=> 48 to 55, C=> 42
+            to 47, D=> 40 to41 and F=>0 to 39. Consider that the courses are 4credits each. Grade points will be: A+=10, A=9, B+=8,
+            B=7, C+=6, C=5,D=4and F=0.
+        </div>
+        <form id = "formStudDetails" action="app.js">
+            <div class="MainFlex">
+                <div class="flexItems">
+                    <label for="name">Name</label>
+                    <input value="" id = "name" name="name" type="text" required>
+                    <br>
+                    <br>
+                    <label for="sem">Sem</label>
+                    <input value="" id="sem" 
+                    name="sem" type="text" required>
+                </div>
+                <div class="flexItems">
+                    <label for="roll">Roll No</label>
+                    <input value="" id="roll"  name="roll" type="text" required>
+                    <br>
+                    <br>
+                    <label for="branch">Branch</label>
+                    <input value="" id="branch" name="branch" type="text" required>
+                </div>
+            </div>
+        </form>
+        <div class="MarksContainer">
+            <p>Marks</p>
+            <form class="courseForm" action="">
+                <div class="flexMarks">
+                    <div id="item1">
+                        <label for="Course1">Course1</label>
+                        <input value="" id="course1" name="course1" type="number">
+                    </div>
+                    <div id="item2">
+                        <label for="Course2">Course2</label>
+                        <input value="" id="course2" name="course2" type="number">
+                    </div>
+                    <div id="item3">
+                        <label for="Course3">Course3</label>
+                        <input value="" id="course3" name="course3" type="number">
+                    </div>
+                    <div id="item4">
+                        <label for="Course4">Course4</label>
+                        <input value="" id="course4" name="course4" type="number">
+                    </div>
+                    <div id="item5">
+                        <label for="Course5">Course5</label>
+                        <input value="" id="course5" name="course5" type="number">
+                    </div>
+                    
+                    <button type="submit" >Button</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="displayContainer">
+            <h1>The North Cap University</h1>
+            <h2>Session 2020-2021 Marksheet</h2>
+            <form action=""> 
+            <div class="dispStudDetails">
+                <div class = "dispItems" id = "nameid" >
+                    <label for="dispname">Name</label>
+                    <input type="text" value="" class="details" name="dispname" readonly>
+                </div>
+                <div  class = "dispItems" id = "semid" >
+                    <label for="dispsem">Sem</label>
+                    <input type="text" value="" class="details" name="dispsem" readonly>
+                </div>
+                <div   class = "dispItems" id = "rollid" >
+                    <label for="disproll">Roll No</label>
+                    <input type="text" value="" class="details" name="disproll" readonly>
+                </div>
+                <div    class = "dispItems" id = "branchid" >
+                    <label for="dispbranch">Branch</label>
+                    <input type="text" value="" class="details" name="dispbranch" readonly>
+                </div>
+            </div>
+            </form>
+            <div class="gridContainer">
+                <div class="courseColumn">
+                    <h3>Courses</h3>
+                    <p>Course1</p>
+                    <p>Course2</p>
+                    <p>Course3</p>
+                    <p>Course4</p>
+                    <p>Course5</p>
+                </div>
+                <div class="gradeColumn">
+                    <h3>Grade</h3>
+                    <input  class="dispGrade" type="text" readonly>
+                    <input class="dispGrade" type="text" readonly>
+                    <input class="dispGrade" type="text" readonly>
+                    <input class="dispGrade" type="text" readonly>
+                    <input class="dispGrade" type="text" readonly>
+                </div>
+                <div class="creditsColumn">
+                    <h3>Credits</h3>
+                    <input class="dispCredits" type="text" readonly>
+                    <input class="dispCredits" type="text" readonly>
+                    <input class="dispCredits" type="text" readonly>
+                    <input class="dispCredits" type="text" readonly>
+                    <input class="dispCredits" type="text" readonly>
+                </div>
+            </div>
+            <div class="cgpa">
+                <label for="cgpa">CGPA</label>
+                <input type="text" id="Cgpa" readonly>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
