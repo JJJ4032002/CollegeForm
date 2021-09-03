@@ -100,7 +100,7 @@ h2 {
   margin: 1em 0;
   border: 1px solid black;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
+  gap: 0.2em;
 }
 .gridContainer p {
   margin-top: 0.3em;
@@ -108,7 +108,7 @@ h2 {
 .gradeColumn,
 .creditsColumn,
 .courseColumn {
-  justify-self: center;
+  justify-self: space-around;
   text-align: center;
 }
 
@@ -143,5 +143,8 @@ h2 {
     justify-content: initial;
     display: flex;
     flex-wrap: wrap;
+  }
+  .gridContainer {
+    gap: 1em;
   }
 }
